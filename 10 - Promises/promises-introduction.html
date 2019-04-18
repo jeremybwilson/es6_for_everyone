@@ -15,6 +15,16 @@ postsPromise
     console.error(err);
   })
 
+const postsPromise2 = fetch('https://wesbos.com/wp-json/wp/v2/posts');
+
+postsPromise2
+  .then(data => data.json())
+  .then(data => { console.log(data) })
+  .catch((err) => {
+    console.error(err);
+    console.log(err);
+  })
+  
 </script>
 </body>
 </html>

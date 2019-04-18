@@ -14,8 +14,8 @@ const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
 
 const ages = [23,62,45,234,2,62,234,62,34];
 
-const old = ages.filter(age => age >= 60);
-console.log(old);
+const senior_citizens = ages.filter(age => age >= 62);
+console.log(`These are the ages above 60:`, senior_citizens);
 
 </script>
 </body>

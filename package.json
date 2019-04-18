@@ -1,0 +1,30 @@
+{
+  "name": "es6_for_everyone",
+  "version": "1.0.0",
+  "description": "![ES6 for Everyone](https://es6.io/images/es6-facebook-share.png?cool=yah)",
+  "main": "data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeremybwilson/es6_for_everyone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeremybwilson/es6_for_everyone/issues"
+  },
+  "homepage": "https://github.com/jeremybwilson/es6_for_everyone#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-shopify": "^27.0.1"
+  }
+}

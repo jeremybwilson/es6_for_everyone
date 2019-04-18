@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const nodeEnv = process.env.NODE_ENV || 'production';
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
@@ -8,6 +9,13 @@ module.exports = {
   },
   output: {
     filename: '_build/bundle.js'
+  },
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        test: /\.js(\?.*)?$/i,
+      }),
+    ],
   },
   module: {
     loaders: [

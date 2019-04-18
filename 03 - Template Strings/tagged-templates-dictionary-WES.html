@@ -19,7 +19,8 @@
   const dict = {
     HTML: 'Hyper Text Markup Language',
     CSS: 'Cascading Style Sheets',
-    JS: 'JavaScript'
+    JS: 'JavaScript',
+    PYTHON: 'Python'
   };
 
   function addAbbreviations(strings, ...values) {
@@ -35,9 +36,9 @@
     }, '');
   }
 
-  const first = 'Wes';
-  const last = 'Bos';
-  const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'} and ${'JS'}`;
+  const first = 'Jeremy';
+  const last = 'Wilson';
+  const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'}, ${'JS'} and ${'PYTHON'}`;
 
   const bio = document.querySelector('.bio');
   const p = document.createElement('p');

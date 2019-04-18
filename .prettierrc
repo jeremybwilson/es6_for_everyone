@@ -4,7 +4,7 @@
         "files": ".prettierrc",
         "options": { "parser": "json" }
       }
-    ]
+    ],
     "printWidth": 80,
     "singleQuote": true,
     "bracketSpacing": true,
