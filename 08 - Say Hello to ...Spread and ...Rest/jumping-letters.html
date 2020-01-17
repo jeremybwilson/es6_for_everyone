@@ -1,44 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>The ...Spread Operator</title>
-    <style>
-      body {
-        min-height: 100vh;
-        font-family: sans-serif;
-        background: #ffc600;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 50px;
-        color: white;
-        text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-      }
-      .jump span {
-        display: inline-block;
-        transition: transform 0.15s;
-        cursor: url('http://csscursor.info/source/santahand.png'), default;
-      }
-      .jump span:hover {
-        transform: translateY(-20px) rotate(10deg) scale(1.5);
-      }
-    </style>
-  </head>
-  <body>
-    <h2 class="jump">SPREADS!</h2>
 
-    <script>
-      const heading = document.querySelector('.jump');
-      // const spans = sparanWrap(heading.textContent);
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The ...Spread Operator</title>
+  <style>
+    body {
+      min-height: 100vh;
+      font-family: sans-serif;
+      background: #ffc600;
+      text-transform: uppercase;
+      font-size: 36px;
+      color: white;
+      text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
 
-      heading.innerHTML = sparanWrap(heading.textContent);
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-direction: column;
+    }
 
-      function sparanWrap(word) {
-        // console.log(spans);
-        return [...word].map(letter => `<span>${letter}</span>`).join('');
-      }
-    </script>
-  </body>
+    div,
+    h2 {
+      clear: both;
+    }
+
+    .jump span,
+    .spread span {
+      display: inline-block;
+      transition: transform 0.15s;
+      cursor: url('http://csscursor.info/source/santahand.png'), default;
+    }
+
+    .jump span:hover,
+    .spread span:hover {
+      transform: translateY(-20px) rotate(10deg) scale(1.5);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2 class="jump">JUMPING LETTERS!</h2>
+  </div>
+
+  <div>
+    <h2 class="spread">SPREADING LETTERS!</h2>
+  </div>
+
+
+  <script>
+    // create a variable for container with .jump class
+    const heading1 = document.querySelector('.jump');
+    const heading2 = document.querySelector('.spread');
+    const spans1 = sparanWrap(heading1.textContent);
+    const spans2 = sparanWrap(heading2.textContent);
+    console.log(spans2);
+    // sparanWrap(heading.textContent);
+    // use innerHTML to replace/add to element the text content from the heading variable
+    heading1.innerHTML = sparanWrap(heading1.textContent);
+    heading2.innerHTML = sparanWrap(heading2.textContent);
+
+    function sparanWrap(word) {
+      // console.log(word);
+      // return the array values into array named word,
+      // then map all individual letters into <span> tags
+      return [...word].map(letter => `<span>${letter}</span>`).join('');
+    }
+
+  </script>
+</body>
+
 </html>

@@ -1,6 +1,6 @@
 var weather = new Promise((resolve) => {
   setTimeout(() => {
-    resolve({ temp: 29, conditions: 'Sunny with Clouds' });
+    resolve({ temp : 29, conditions : 'Sunny with Clouds' });
   }, 2000);
 });
 
@@ -17,14 +17,14 @@ Promise
     console.log(weatherInfo, tweetInfo);
   });
 
-const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
-const streetCarsPromise = fetch("http://data.ratp.fr/api/datasets/1.0/search/?q=paris");
+const postsPromise = fetch( 'http://www.jeremywilson.com/wp/wp-json/wp/v2/posts/' );
+const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
 Promise
   .all([postsPromise, streetCarsPromise])
   .then(responses => {
-    return Promise.all(responses.map(res => res.json()))
+    return Promise.all(responses.map(res => res.json()));
   })
-  .then(responses =>{
+  .then(responses => {
     console.log(responses);
   });

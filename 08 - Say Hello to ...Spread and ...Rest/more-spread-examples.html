@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Spread Examples</title>
 </head>
+
 <body>
   <div class="people">
     <p>Wes</p>
     <p>Kait</p>
     <p>Randy</p>
   </div>
-<script>
-  // const people = Array.from(document.querySelectorAll('.people p'));
-  // const names = people.map((person) => person.textContent );
+  <script>
+    const peopleNode = document.querySelectorAll('.people p');                  // this results in a NodeList
+    const peopleArray1 = Array.from(document.querySelectorAll('.people p'));     // this turns the NodeList result into an Array
+    const peopleArray2 = [...document.querySelectorAll('.people p')];  // this results in an array
 
-  const deepDish = {
-    pizzaName: 'Deep Dish',
-    size: 'Medium',
-    ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
-  };
+    // const names1 = peopleNode.map((person) => person.textContent);
+    const names2 = peopleArray1.map((person) => person.textContent);
+    const names3 = peopleArray2.map((person) => person.textContent);
 
-  const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients];
-  // console.log(shoppingList);
+    const deepDish = {
+      pizzaName: 'Deep Dish',
+      size: 'Medium',
+      ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+    };
 
-  const comments = [
-    { id: 209384, text: 'I love your dog!' },
-    { id: 523423, text: 'Cuuute! 🐐' },
-    { id: 632429, text: 'You are so dumb' },
-    { id: 192834, text: 'Nice work on this wes!' },
-  ];
-  const id = 632429;
-  const commentIndex = comments.findIndex(comment => comment.id === id);
+    const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients];
+    // console.log(shoppingList);
 
-  const newComments = [...comments.slice(0,commentIndex), ...comments.slice(commentIndex + 1)];
-  console.log(newComments);
+    const comments = [
+      { id: 209384, text: 'I love your dog!' },
+      { id: 523423, text: 'Cuuute! 🐐' },
+      { id: 632429, text: 'You are so dumb' },
+      { id: 192834, text: 'Nice work on this wes!' },
+    ];
+    const commentId1 = 632429;
+    const commentIndex1 = comments.findIndex(comment => comment.id === commentId1);
 
-</script>
+    const commentId2 = 192834;
+    const commentIndex2 = comments.findIndex(comment => comment.id === commentId2);
+
+    // const newComments = [comments.slice(0, commentIndex1), comments.slice(commentIndex1 + 1)];    // creates an array of arrays so not correct in this case.
+    const newComments = [...comments.slice(0, commentIndex1), ...comments.slice(commentIndex1 + 1)];
+    console.log(newComments);
+
+  </script>
 </body>
+
 </html>

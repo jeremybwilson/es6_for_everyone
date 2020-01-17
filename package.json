@@ -18,13 +18,15 @@
   },
   "homepage": "https://github.com/jeremybwilson/es6_for_everyone#readme",
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-markdown": "^1.0.0",
-    "eslint-plugin-react": "^7.12.4",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-markdown": "^1.0.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-plugin-shopify": "^27.0.1"
   }
 }

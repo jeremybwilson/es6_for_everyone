@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The ...Rest Param</title>
+</head>
+
+<body>
+  <script>
+    function convertCurrency1(rate, ...amounts) {
+      // console.log(rate, amounts);
+      return amounts.map(amount => amount * rate);
+    }
+
+    const amounts1 = convertCurrency1(1.54, 100, 23, 52, 1, 56);
+    console.log(amounts1);
+
+    function convertCurrency2(rate, tax, tip, ...amounts) {
+      // console.log(rate, tax, tip, amounts);
+      return amounts.map(amount => amount * rate);
+    }
+
+    const amounts2 = convertCurrency2(1.51, 1.08, 1.15, 100, 90, 52, 1, 56);
+    console.log(amounts2);
+
+    const runner = ['Jeremy', 123, 5.4, 5, 3, 6.5, 12];
+    const [name, id, ...runs] = runner;
+    console.log(name, id, runs);
+
+    const team = ['Jeremy', 'Alex', 'Anika', 'Bob', 'Roger'];
+    const [captain, assistant, ...players] = team;
+    console.log(captain, assistant, players);
+
+  </script>
+</body>
+
+</html>

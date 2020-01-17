@@ -1,0 +1,111 @@
+// Create a function that takes a number as its only argument
+// and returns true if it's less than or equal to zero,
+// otherwise return false.
+
+const lessThanOrEqualToZero = (num) => {
+	return (num <= 0) ? true : false;
+}
+
+// Create a function that finds the index of a given item if the array is sorted.
+const search = (arr, item) => {
+	return arr.indexOf(item);
+}
+
+// Create a function that takes a name and returns a greeting.
+// Don't use a normal function but use an "arrow function".
+
+// helloName("Gerald") ➞ "Hello Gerald!"
+
+const helloName = (name) => {
+	return `Hello ${name}!`;
+}
+
+// Write a function that returns the length of a string.
+// Make your function recursive.
+
+function length(str) {
+  return str.length;
+}
+
+const length = (str) => {
+  // ternary operator version
+  str == '' ? 0 : length(str.substring(1)) + 1;
+}
+
+// Create a function that gets an object arguments with height,
+// width and length of a box and returns the volume of the box.
+// volume = height * width * length
+
+function volumeOfBox(sizes) {
+  const totalVolume = (parseFloat(sizes.height) * parseFloat(sizes.width) * parseFloat(sizes.length));
+  return totalVolume;
+}
+
+// arrow function version
+const volumeOfBox = ({ width, length, height }) => width * length * height;
+
+// Here's an image of four models. Some of the cubes are hidden behind other cubes.
+// Model one consists of one cube. Model two consists of four cubes, and so on...
+// Write a function that takes a number n and returns the total number of boxes, //
+// visible and invisible.
+
+const stackBoxes = n => n * n;
+
+// Create a function that takes an array and returns the first element.
+// getFirstValue([1, 2, 3]) ➞ 1
+// getFirstValue([80, 5, 100]) ➞ 80
+// getFirstValue([-500, 0, 50]) ➞ -500
+
+function getFirstValue(arr){
+  return arr[0];
+}
+
+const getFirstValue = (arr) => {
+  return arr[0];
+}
+
+// Create a function that finds the maximum range of a triangles third edge.
+// nextEdge(8, 10) ➞ 17
+// nextEdge(5, 7) ➞ 11
+// nextEdge(9, 2) ➞ 10
+
+const nextEdge = (side1, side2) => {
+  // (side1 + side2) - 1 = maximum range of third edge.
+  return (side1 + side2) - 1;
+}
+
+// declare the fn, use an arrow fn
+function programmers(one, two, three) {
+  let min = 0;
+  let max = 0;
+  let difference;
+  // iterate through the array
+  for(let i = 0; i < arr.length; i++){
+    min = Math.min(arr);
+    max = Math.max(arr);
+    // find the difference between min and max
+    difference = max - min;
+  }
+  // return the result
+  return difference;
+}
+// es6 version
+const programmers = (arr) => {
+  let min = 0;
+  let max = 0;
+  let difference;
+  // iterate through the array
+  for(let i = 0; i < arr.length; i++){
+    // if(arr[i] == Math.min()){
+    //   min = Math.min(arr[i]);
+    // } else if(arr[i] == Math.max()){
+    //   max = Math.max(arr[i]);
+    // }
+    min = Math.min(arr);
+    max = Math.max(arr);
+    // find the difference between min and max
+    difference = max - min;
+  }
+  // return the result
+  return difference;
+}

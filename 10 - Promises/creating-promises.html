@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Creating Promises!</title>
-  </head>
-  <body>
-    <script>
-      const p = new Promise((resolve, reject) => {
-        resolve('Jeremy is cool');
 
-        setTimeout(() => {
-          reject(Error("Err Jeremy isn't cool"));
-        }, 1000);
-      });
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Creating Promises!</title>
+</head>
 
-      p.then(data => {
-        console.log(data);
-      }).catch(err => {
-        console.error(err);
-      });
-    </script>
-  </body>
+<body>
+
+  <script src="./scripts/creating-promises.js"></script>
+</body>
+
 </html>

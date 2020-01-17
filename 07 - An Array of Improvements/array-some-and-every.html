@@ -1,22 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Array .some() and .every()</title>
 </head>
+
 <body>
-<script>
-  const ages = [32, 15, 19, 12];
+  <script>
+    const ages = [32, 15, 19, 12];
 
-  // 👵👨 is there at least one adult in the group?
-  const adultPresent = ages.some(age => age >= 18);
-  console.log(adultPresent);
+    // 👵👨 is there at least one adult in the group?
+    const adultPresent = ages.some(age => age >= 18);
+    console.log(adultPresent);
 
-  // 🍻 is everyone old enough to drink?
-  const allOldEnough = ages.every(age => age >= 19);
-  console.log(allOldEnough);
+    // 🍻 is everyone old enough to drink?
+    const allOldEnough = ages.every(age => age >= 19);
+    console.log(allOldEnough);
+
+    const fishes = ['bass', 'cod', 'salmon', 'trout'];
+    const isTrout = fishes.some(fish => fish === 'trout');
+    console.log(isTrout);
+
+    const allBass = fishes.every(fish => fish === 'trout');
+    console.log(allBass);
 
 
-</script>
+  </script>
 </body>
+
 </html>

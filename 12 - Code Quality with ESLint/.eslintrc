@@ -1,17 +1,23 @@
 {
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true,
+    "jquery": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": [
+    "jsx-a11y",
+    "html",
+    "markdown"
+  ],
   "rules": {
     "no-console": 0,
     "no-unused-vars": 1,
-    "comma-dangle": 0
-  },
-  "plugins": [
-    "html",
-    "markdown",
-    "shopify/esnext"
-  ]
+    "comma-dangle": 1,
+    "jsx-a11y/rule-name": 2
+  }
 }

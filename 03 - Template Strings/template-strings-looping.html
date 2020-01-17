@@ -1,44 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Template Strings!</title>
 </head>
+
 <body>
-<script>
-  const dogs = [
-    { name: 'Snickers', age: 2, keywords: ['brown', 'male', 'spiced', 'crisp']  },
-    { name: 'Hugo', age: 8, keywords: ['white', 'female', 'spiced', 'crisp']  },
-    { name: 'Sunny', age: 1, keywords: ['spots', 'female', 'spiced', 'crisp'] },
-
-  ];
-
-  function renderKeywords(keywords) {
-    return `
-      <ul>
-        ${keywords.map(keyword => `<li>${keyword}</li>`).join('')}
-      </ul>
-    `;
-  }
-
-  function createMarkUp2(){
-    const markup = `
-      <ul class="dogs">
-        ${dogs.map(dog => `
-          <li>
-            ${dog.name}
-            is
-            ${dog.age * 7}
-            ${renderKeywords(dog.keywords)}
-          </li>
-        `).join('')}
-      </ul>
-    `;
-    document.body.innerHTML = markup;
-  }
-
-  createMarkUp2();
-</script>
+  <script src="./scripts/template-strings-looping.js"></script>
 
 </body>
+
 </html>

@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Destructuring in Action!</title>
 </head>
+
 <body>
-<script>
-  let inRing = 'Hulk Hogan';
-  let onSide = 'The Rock';
+  <script>
+    let inRing = 'Hulk Hogan';
+    let onSide = 'The Rock';
 
-  console.log(inRing, onSide);
-  [inRing, onSide] = [onSide, inRing];
-  console.log(inRing, onSide);
+    let isBoy = 'Alex';
+    let isGirl = 'Anika';
 
-</script>
+    console.log(isBoy, isGirl);
+    [isBoy, isGirl] = [isGirl, isBoy];
+    console.log(isBoy, isGirl);
+
+  // console.log(inRing, onSide);
+  // [inRing, onSide] = [onSide, inRing];
+  // console.log(inRing, onSide);
+
+  </script>
 </body>
+
 </html>

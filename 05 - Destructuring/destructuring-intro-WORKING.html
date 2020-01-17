@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destructuring!</title>
+</head>
+
+<body>
+  <script>
+    const person = {
+      first: 'Jeremy',
+      last: 'Wilson',
+      country: 'United States',
+      city: 'Seattle',
+      twitter: '@jeremybwilson'
+    };
+
+    const { first, last, twitter } = person;
+
+    const jeremy = {
+      first: 'Jeremy',
+      last: 'Wilson',
+      links: {
+        social: {
+          twitter: 'https://twitter.com/jeremybwilson',
+          facebook: 'https://facebook.com/jeremybwilson',
+        },
+        web: {
+          blog: 'https://jeremywilson.com/wp/'
+        }
+      }
+    };
+
+    const { twitter: tweet, facebook: fb } = jeremy.links.social;
+
+    const { blog } = jeremy.links.web;
+
+    const settings = { width: 300, color: 'black' }  // height, fontSize
+    const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+
+  </script>
+</body>
+
+</html>

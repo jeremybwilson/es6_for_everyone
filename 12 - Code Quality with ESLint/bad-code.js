@@ -1,4 +1,7 @@
-var weather = new Promise((resolve) => {
+/* globals twttr ga */
+/* eslint-disable no-extend-native */
+
+const weather = new Promise((resolve) => {
   setTimeout(() => {
     resolve({ temp: 29, conditions: 'Sunny with Clouds' });
   }, 2000);
@@ -12,19 +15,28 @@ const tweets = new Promise((resolve, reject) => {
 
 Promise
   .all([weather, tweets])
-  .then(responses => {
+  .then((responses) => {
     const [weatherInfo, tweetInfo] = responses;
     console.log(weatherInfo, tweetInfo);
   });
 
-const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+const postsPromise = fetch('http://www.jeremywilson.com/wp/wp-json/wp/v2/posts/');
 const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
 
 Promise
   .all([postsPromise, streetCarsPromise])
-  .then(responses => {
-    return Promise.all(responses.map(res => res.json()));
-  })
-  .then(responses => {
+  .then((responses) => Promise.all(responses.map((res) => res.json())))
+  .then((responses) => {
     console.log(responses);
   });
+
+const jeremy = {
+  age: 44,
+  cool: true,
+}
+
+// line specific eslint rules
+/* eslint-disable */
+ga.track();
+twttr.trackConversion();
+/* eslint-enable */

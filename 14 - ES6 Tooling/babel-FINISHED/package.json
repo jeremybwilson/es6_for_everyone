@@ -1,5 +1,5 @@
 {
-  "name": "babel",
+  "name": "es6tooling",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,10 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "babel-cli": "^7.0.0-beta.1",
-    "babel-preset-env": "^2.0.0-beta.1"
-  },
+  "dependencies": {},
   "babel": {
     "presets": [
       [
@@ -31,6 +28,9 @@
     ]
   },
   "devDependencies": {
-    "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }

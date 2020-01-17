@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tagged Templates</title>
   <style>
     abbr {
-      border-bottom:1px dotted grey;
+      border-bottom: 1px dotted grey;
     }
   </style>
 </head>
+
 <body>
 
   <div class="bio">
 
   </div>
 
-<script>
-  const dict = {
-    HTML: 'Hyper Text Markup Language',
-    CSS: 'Cascading Style Sheets',
-    JS: 'JavaScript',
-    PYTHON: 'Python'
-  };
+  <script>
+    const dict = {
+      HTML: 'Hyper Text Markup Language',
+      CSS: 'Cascading Style Sheets',
+      JS: 'JavaScript',
+      PYTHON: 'Python'
+    };
 
-  function addAbbreviations(strings, ...values) {
-    const abbreviated = values.map(value => {
-      if(dict[value]) {
-        return `<abbr title="${dict[value]}">${value}</abbr>`;
-      }
-      return value;
-    });
+    function addAbbreviations(strings, ...values) {
+      const abbreviated = values.map(value => {
+        if (dict[value]) {
+          return `<abbr title="${dict[value]}">${value}</abbr>`;
+        }
+        return value;
+      });
 
-    return strings.reduce((sentence, string, i) => {
-      return `${sentence}${string}${abbreviated[i] || ''}`;
-    }, '');
-  }
+      return strings.reduce((sentence, string, i) => {
+        return `${sentence}${string}${abbreviated[i] || ''}`;
+      }, '');
+    }
 
-  const first = 'Jeremy';
-  const last = 'Wilson';
-  const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'}, ${'JS'} and ${'PYTHON'}`;
+    const first = 'Jeremy';
+    const last = 'Wilson';
+    const sentence = addAbbreviations`Hello my name is ${first} ${last} and I love to code ${'HTML'}, ${'CSS'}, ${'JS'} and ${'PYTHON'}`;
 
-  const bio = document.querySelector('.bio');
-  const p = document.createElement('p');
-  p.innerHTML = sentence;
-  bio.appendChild(p);
+    const bio = document.querySelector('.bio');
+    const p = document.createElement('p');
+    p.innerHTML = sentence;
+    bio.appendChild(p);
 
-</script>
+  </script>
 </body>
+
 </html>
