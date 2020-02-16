@@ -1,26 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proxies!</title>
 </head>
+
 <body>
-<script>
-  const safeHandler = {
-    set(target, name, value) {
-      const likeKey = Object.keys(target).find(k => k.toLowerCase() === name.toLowerCase());
+  <script>
+    const safeHandler = {
+      set(target, name, value) {
+        const likeKey = Object.keys(target).find(k => k.toLowerCase() === name.toLowerCase());
 
-      if (!(name in target) && likeKey) {
-        throw new Error(`Oops! Looks like like we already have a(n) ${name} property but with the case of ${likeKey}.`);
+        if (!(name in target) && likeKey) {
+          throw new Error(`Oops! Looks like like we already have a(n) ${name} property but with the case of ${likeKey}.`);
+        }
+        target[name] = value;
       }
-      target[name] = value;
-    }
-  };
+    };
 
-  const safety = new Proxy({ id: 100 }, safeHandler);
+    const safety = new Proxy({ id: 100 }, safeHandler);
 
-  safety.ID = 200;
+    safety.ID = 200;
 
-</script>
+  </script>
 </body>
+
 </html>
