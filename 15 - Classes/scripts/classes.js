@@ -41,4 +41,6 @@ class Dog {
 // };
 
 const snickers = new Dog('Snickers', 'King Charles');
+const chewie = new Dog('Chewie', 'Border Collie');
 const sunny = new Dog('Sunny', 'Golden Doodle');
+const paulina = new Dog('Paulina', 'Border Collie');

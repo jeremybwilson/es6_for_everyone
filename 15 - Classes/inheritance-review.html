@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inheritance Review</title>
 </head>
+
 <body>
-<script>
-  function Dog(name, breed) {
-    this.name = name;
-    this.breed = breed;
-  }
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark! My name is ${this.name}`)
-  }
 
-  const snickers = new Dog('Snickers', 'King Charles');
-  const sunny = new Dog('Sunny', 'Golden Doodle');
-
-  Dog.prototype.bark = function() {
-    console.log(`Bark Bark🇨🇦🇨🇦🇨🇦! My name is ${this.name} and I'm a ${this.breed}`);
-  }
-
-  Dog.prototype.cuddle = function() {
-    console.log(`I love you owner!`);
-  }
-</script>
+  <script src="./scripts/inheritance-review.js"></script>
 </body>
+
 </html>
