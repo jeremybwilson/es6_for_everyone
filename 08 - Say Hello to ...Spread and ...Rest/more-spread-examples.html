@@ -15,13 +15,13 @@
     <p>Randy</p>
   </div>
   <script>
-    const peopleNode = document.querySelectorAll('.people p');                  // this results in a NodeList
+    const peopleNode = document.querySelectorAll('.people p');                   // this results in a NodeList
     const peopleArray1 = Array.from(document.querySelectorAll('.people p'));     // this turns the NodeList result into an Array
     const peopleArray2 = [...document.querySelectorAll('.people p')];  // this results in an array
 
     // const names1 = peopleNode.map((person) => person.textContent);
-    const names2 = peopleArray1.map((person) => person.textContent);
-    const names3 = peopleArray2.map((person) => person.textContent);
+    const names2 = peopleArray1.map((person) => { return person.textContent });
+    const names3 = peopleArray2.map((person) => { return person.textContent });
 
     const deepDish = {
       pizzaName: 'Deep Dish',

@@ -1,7 +1,18 @@
+// Object literal upgrades
 const first = 'Chewie';
 const last = 'Wilson';
 const age = 2;
 const breed = 'Border Collie';
+
+// Note the same names for key/value pairs
+// const dog = {
+//   first: first,
+//   last: last,
+//   age: age,
+//   breed: breed
+// };
+
+// you can condense the above down to this
 const dog = {
   first,
   last,
