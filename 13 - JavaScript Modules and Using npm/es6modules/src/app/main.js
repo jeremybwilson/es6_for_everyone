@@ -2,8 +2,8 @@ import { uniq } from 'lodash';
 import insane from 'insane';
 import jsonp from 'jsonp';
 
-import { apiKey, ages, url } from './config';
-import { sayHi, old, dog } from './config';
+import { apiKey, ages, url, sayHi, old, dog } from './config';
+// import { sayHi, old, dog } from './config';
 
 // console.log(apiKey, url);
 // sayHi('Jeremy');
