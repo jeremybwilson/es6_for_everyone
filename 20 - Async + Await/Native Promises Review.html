@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Native Promises</title>
 </head>
 
@@ -9,14 +12,16 @@
 
 <body>
   <script>
-    // fetch('api.github.com/users/wesbos').then(res => {
-    //   return res.json();
-    // }).then(res => {
-    //   console.log(res);
-    // }).catch(err => {
-    //   console.error('OH NOO!!!!!!!');
-    //   console.error(err);
-    // })
+    fetch('https://api.github.com/users/jeremybwilson').then(res => {
+      return res.json();
+    })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.error('OH NOO!!!!!!!');
+        console.error(err);
+      })
 
     const video = document.querySelector('.handsome');
 
